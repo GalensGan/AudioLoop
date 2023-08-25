@@ -18,7 +18,7 @@ namespace AudioLoop
             // 启动声音循环播放
             var startCommand = new Command("start", "启动声音循环播放");
             rootCommand.Add(startCommand);
-            var intervalOption = new Option<int>(name: "--interval", description: "循环播放时间间隔，默认 300000ms，单位：ms", getDefaultValue: () => 60000);
+            var intervalOption = new Option<int>(name: "--interval", description: "循环播放时间间隔，默认 180000ms，单位：ms", getDefaultValue: () => 180000);
             intervalOption.AddAlias("-i");
 
             startCommand.AddOption(intervalOption);
